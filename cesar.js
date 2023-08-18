@@ -1,8 +1,24 @@
-const msg = ('Johan Sebastian Puentes Pulido').toLowerCase();
+import Ask from "https://deno.land/x/ask@1.0.6/mod.ts";
+const ask = new Ask();
+
+  const answers = await ask.prompt([
+    {
+        name: "range",
+        type: "number",
+        message: "Range:",
+    },
+    {
+        name: "text",
+        type: "input",
+        message: "type text to encrypt:",
+    },
+    ]);
+
+const msg = (answers.text).toLowerCase();
 const convertedMsg = [...msg];
 const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
  'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let num = 24;
+let num = Math.floor(answers.range);
 let copy = [...letters];
 let myObj = {};
 let result = [];
@@ -19,7 +35,7 @@ for (let x = 0;x<copy.length-1;x++) {
 }
 
 function translate() {
-    console.log(myObj);
+    // console.log(myObj);
     for(let ms of convertedMsg) {
         if (ms == ' ') {
             result.push(' ');
