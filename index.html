@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesar Encoder</title>
+</head>
+<body>
+    <main class="container">
+        <section class="app">
+            <div class="form">
+                <form id="form">
+                    <label for="text">Type a message to encrypt only in (EN)</label>
+                    <input id="text" type="text" placeholder="message" autocomplete="off">
+                    <div class="output">
+                        <p id="output"></p>
+                    </div>
+                    <div class="options">
+                        <label for="range">Select a range of encryptation</label>
+                        <input id="range" type="range" min="0" max="25">
+                        <p class="value"></p>
+                    </div>
+                    <button id="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./cesar.js"></script>
+</body>
+</html>
