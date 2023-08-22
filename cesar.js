@@ -5,7 +5,7 @@ const ask = new Ask();
     {
         name: "range",
         type: "number",
-        message: "Range:",
+        message: "Range of encryption (between 0 & 26):",
     },
     {
         name: "text",
@@ -18,7 +18,7 @@ const msg = (answers.text).toLowerCase();
 const convertedMsg = [...msg];
 const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
  'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-let num = Math.floor(answers.range);
+let num = Number(answers.range);
 let copy = [...letters];
 let myObj = {};
 let result = [];
